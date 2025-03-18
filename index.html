@@ -3,81 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCC SmartBot</title>
-
-    <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/M/microsoft-365-2022-logo-7B23759A49-seeklogo.com.png">
-
+    <title>T-Mobile Inspired Design</title>
+    <link rel="shortcut icon" href="https://i.postimg.cc/V6Gxgyhh/image-Photoroom-2-1.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background: radial-gradient(circle at top right, #E20074, #9D7690);
-            background-image: url('copilot%20bot%20images/bg-magenta-odmor.jpg'); /* Fixed path */
-            background-color: black;
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
+      body, html {
+          height: 100%;
+          margin: 0;
+          overflow-x: hidden;
+      }
 
-        .iframe-container {
-            width: 90%;
-            height: 80%;
-            max-width: 1200px;
-            max-height: 800px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      body {
+          /* Updated background image URL */
+          background-image: url('https://i.ibb.co/1tnzVgmb/d73e00e1c2d1f423fc3a.png');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+      }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+      .main-container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+      }
 
-        /* Positioning the logo on the right */
-        .telekom-logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 120px; /* Adjust size as needed */
-        }
+      .row {
+          flex-grow: 1;
+          margin: 0;
+          flex-wrap: wrap;
+          align-items: center;
+      }
 
-        @media (max-width: 768px) {
-            .iframe-container {
-                width: 100%;
-                height: 70%;
-            }
+      .left-column, .right-column {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
 
-            .telekom-logo {
-                width: 90px; /* Make logo smaller on mobile */
-                top: 10px;
-                right: 10px;
-            }
-        }
+      @media (max-width: 768px) {
+          .left-column, .right-column {
+              width: 100%;
+              text-align: center;
+              padding-top: 20px;
+              padding-bottom: 20px;
+          }
+          .left-column {
+            order: 0;
+          }
+          .right-column{
+            order: 1;
+          }
+      }
+
+      .loading-square {
+          width: 450px;
+          height: 450px;
+          background-color: white;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+      }
+
+      .spinner {
+          border: 4px solid #f3f3f3;
+          border-top: 4px solid #3498db;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          animation: spin 2s linear infinite;
+          display: none;
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      .t-logo {
+          width: 450px;
+          height: 450px;
+          background-color: white;
+          mask: url("https://asset.brandfetch.io/id6Zt-k0cL/idv447pZnj.png") center / contain no-repeat;
+          box-sizing: border-box;
+      }
+
+      #botsonic-iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 450px;
+        border-radius: 10px;
+        border: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
     </style>
 </head>
 <body>
-
-    <div class="iframe-container">
-        <iframe frameBorder="0" 
-        src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=3a52612a-9b6b-4a9a-a940-ea26ae74d23b&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fcaff46f3-c46f-4bef-aef5-022dd9056228%2Fconnect">
-        </iframe>
+    <div class="container-fluid main-container">
+        <div class="row h-100">
+            <div class="col-12 col-md-6 left-column">
+                <div class="loading-square">
+                    <iframe
+                        id="botsonic-iframe"
+                        src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=3a52612a-9b6b-4a9a-a940-ea26ae74d23b&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fcaff46f3-c46f-4bef-aef5-022dd9056228%2Fconnect"
+                        title="Botsonic Widget"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 right-column">
+                <div class="t-logo"></div>
+            </div>
+        </div>
     </div>
-    
-    <!-- Positioned on the right -->
-    <img src="https://asset.brandfetch.io/id6Zt-k0cL/idv447pZnj.png" alt="Telekom Logo" class="telekom-logo">
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
