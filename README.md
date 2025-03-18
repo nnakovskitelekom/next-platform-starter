@@ -1,43 +1,36 @@
-# Next.js on Netlify Platform Starter
+# MobiBoT - The Future of In-Store Phone Shopping
 
-[Live Demo](https://nextjs-platform-starter.netlify.app/)
+🚀 MobiBoT is a chatbot-driven assistant designed to enhance the in-store mobile phone shopping experience by providing instant product information, comparisons, and influencer reviews through QR code integration.
 
-A modern starter based on Next.js 14 (App Router), Tailwind, daisyUI, and [Netlify Core Primitives](https://docs.netlify.com/core/overview/#develop) (Edge Functions, Image CDN, Blob Store).
+🔥 Key Features
+Instant Access to Specs – Scan a QR code to get detailed phone specifications in seconds.
+Side-by-Side Comparisons – Easily compare multiple models to make an informed choice.
+Influencer Reviews – Get expert opinions and real-world feedback from across the web.
+No App Required – A web-based solution accessible via any browser—just scan and chat!
+🎯 Why MobiBoT?
+✅ Boosts Sales – Helps customers make faster, more confident purchase decisions.
+✅ Enhances Experience – Eliminates the need to leave the store for online research.
+✅ Reduces Staff Burden – Frees up sales staff to focus on personalized service.
+✅ Low-Cost & Easy Deployment – Uses Dialogflow, Google Sheets, and QR codes with minimal setup.
 
-In this site, Netlify Core Primitives are used both implictly for running Next.js features (e.g. Route Handlers, image optimization via `next/image`, and more) and also explicitly by the user code. 
+⚡ How It Works
+1️⃣ Scan the QR Code – Each phone has a unique QR code.
+2️⃣ Start the Chat – The bot provides real-time insights and guidance.
+3️⃣ Get Information – Receive key specs, comparisons, and expert reviews.
+4️⃣ Make a Purchase – Customers get guided to the best option based on their needs.
 
-Implicit usage means you're using any Next.js functionality and everything "just works" when deployed - all the plumbing is done for you. Explicit usage is framework-agnostic and typically provides more features than what Next.js exposes.
+📅 Implementation Timeline
+✔ Setup & Data Collection – Weeks 1-2
+✔ QR Code Integration – Week 3
+✔ Testing & Training – Week 4
+✔ Launch in Stores – April 1st, 2025
 
-## Deploying to Netlify
+💡 Expected Impact:
 
-This site requires [Netlify Next Runtime v5](https://docs.netlify.com/frameworks/next-js/overview/) for full functionality. That version is now being gradually rolled out to all Netlify accounts. 
-
-After deploying via the button below, please visit the **Site Overview** page for your new site to check whether it is already using the v5 runtime. If not, you'll be prompted to opt-in to to v5.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter)
-
-## Developing Locally
-
-1. Clone this repository, then run `npm install` in its root directory.
-
-2. For the starter to have full functionality locally (e.g. edge functions, blob store), please ensure you have an up-to-date version of Netlify CLI. Run:
-
-```
-npm install netlify-cli@latest -g
-```
-
-3. Link your local repository to the deployed Netlify site. This will ensure you're using the same runtime version for both local development and your deployed site.
-
-```
-netlify link
-```
-
-4. Then, run the Next.js development server via Netlify CLI:
-
-```
-netlify dev
-```
-
-If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
+📈 5% increase in conversion rates
+💰 Higher-value purchases & reduced return rates
+⏳ Less time spent on routine inquiries by staff
+🔗 Get Started: [Insert GitHub repo link]
+👥 Contribute: We welcome suggestions, feedback, and contributions!
 
 
