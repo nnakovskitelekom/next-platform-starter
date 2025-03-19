@@ -8,109 +8,125 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-      body, html {
-          height: 100%;
-          margin: 0;
-          overflow-x: hidden;
-      }
-      body {
-          /* Updated background image URL */
-          background-image: url('https://i.ibb.co/1tnzVgmb/d73e00e1c2d1f423fc3a.png');
-          background-size: cover;
-          background-position: center;
-          background-attachment: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-      }
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            background-image: url('https://i.ibb.co/1tnzVgmb/d73e00e1c2d1f423fc3a.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-      .main-container {
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-      }
+        .main-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-      .row {
-          flex-grow: 1;
-          margin: 0;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center; /* Center columns horizontally */
-      }
+        .row {
+            flex-grow: 1;
+            margin: 0;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
 
-      .left-column, .right-column {
-          height: auto;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 15px; /* Add some padding to the columns */
-      }
+        .left-column, .right-column {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
 
-      @media (max-width: 768px) {
-          .left-column, .right-column {
-              width: 100%;
-              text-align: center;
-          }
-          .left-column {
-            order: 0;
-          }
-          .right-column{
-            order: 1;
-          }
-      }
+        @media (max-width: 768px) {
+            .left-column, .right-column {
+                width: 100%;
+                text-align: center;
+            }
+            .left-column {
+                order: 0;
+            }
+            .right-column{
+                order: 1;
+            }
+        }
 
-      .loading-square {
-          width: 90%; /* Use a percentage of the screen width */
-          max-width: 450px; /* But don't exceed 450px */
-          height: auto; /* Maintain aspect ratio */
-          aspect-ratio: 1 / 1;
-          background-color: white;
-          border-radius: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          box-sizing: border-box;
-          margin-bottom: 20px;
-          padding: 0; /* Remove padding, iframe will fill it */
-      }
+        /* Modified for larger elements on phones */
+        @media (max-width: 576px) { /* Adjust the breakpoint as needed */
+            .left-column, .right-column {
+                padding: 30px; /* Increase padding for more space */
+            }
 
-      .spinner {
-          border: 4px solid #f3f3f3;
-          border-top: 4px solid #3498db;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          animation: spin 2s linear infinite;
-          display: none;
-      }
+            .loading-square {
+                width: 95%; /* Make it wider */
+                max-width: 500px; /* Increase max width */
+            }
 
-      @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-      }
+            .t-logo {
+              width: 95%;
+              max-width: 500px;
+            }
+        }
 
-      .t-logo {
-        width: 90%; /* Use percentage */
-        max-width: 450px; /* Max width */
-        height: auto;
-        aspect-ratio: 1 / 1;
-        background-color: white;
-        mask: url("https://asset.brandfetch.io/id6Zt-k0cL/idv447pZnj.png") center / contain no-repeat;
-        box-sizing: border-box;
-        margin-bottom: 0; /* Remove bottom margin */
-      }
+        .loading-square {
+            width: 90%;
+            max-width: 450px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 0;
+        }
 
-      #botsonic-iframe {
-        width: 100%;  /* Take up full width of parent */
-        height: 100%; /* Take up full height of parent */
-        min-height: 200px; /* Add a minimum height */
-        border-radius: 10px;
-        border: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: block; /* Important for layout */
-      }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .t-logo {
+            width: 90%;
+            max-width: 450px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            background-color: white;
+            mask: url("https://asset.brandfetch.io/id6Zt-k0cL/idv447pZnj.png") center / contain no-repeat;
+            box-sizing: border-box;
+            margin-bottom: 0;
+        }
+
+        #botsonic-iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            border-radius: 10px;
+            border: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +136,7 @@
                 <div class="loading-square">
                     <iframe
                         id="botsonic-iframe"
-                        src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=3a52612a-9b6b-4a9a-a940-ea26ae74d23b&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fcaff46f3-c46f-4bef-aef5-022dd9056228%2Fconnect"
+                        src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=3a52612a-9b6b-4a9a-a940-ea26ae74d23b&token=3a52612a-9b6b-4a9a-a940-ea26ae74d23b&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fcaff46f3-c46f-4bef-aef5-022dd9056228%2Fconnect"
                         title="Botsonic Widget"
                     ></iframe>
                 </div>
