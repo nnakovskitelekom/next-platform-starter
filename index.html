@@ -63,19 +63,28 @@
         /* Modified for larger elements on phones */
         @media (max-width: 576px) { /* Adjust the breakpoint as needed */
             .left-column, .right-column {
-                padding: 15px; /* Keep original padding */
+                padding: 15px;
             }
 
             .loading-square {
-                width: 100%; /* Make it use the full width of the column */
-                max-width: 550px; /* Increase max width */
+                width: 95%; /* Increased width */
+                max-width: 600px; /* Further increased max-width */
                 height: auto;
+                margin-bottom: 20px; /* Added margin below widget */
             }
 
             .t-logo {
-                width: 100%; /* Make it use the full width of the column */
-                max-width: 550px; /* Increase max width */
+                width: 80%; /* Reduced width of logo */
+                max-width: 400px; /* Reduced max-width of logo */
                 height: auto;
+                order: 2; /* Ensure logo is below widget */
+            }
+             .row {
+                flex-direction: column; /* Stack columns vertically on small screens */
+            }
+            .left-column, .right-column {
+                align-items: center; /* Center content horizontally */
+                width: 100%;
             }
         }
 
